@@ -1,5 +1,5 @@
 function adultFilter(persons) {
-  // ...
+  return persons.filter((el)=>el.age===17);
 }
 
 const persons = [
