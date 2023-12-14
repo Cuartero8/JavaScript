@@ -1,5 +1,5 @@
 function calculateAverageAge(persons) {
-  let sum = persons.map((p)=>p.age).reduce((a, b)=>a+b);
+  let sum = persons.reduce((a, b) => a.age + b.age);
   return Math.round(sum/2);
 }
 

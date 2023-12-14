@@ -1,5 +1,10 @@
 function uncompletedNotes(notes) {
-  // ...
+  console.log("Uncompleted task:");
+  notes.forEach((activity) => {
+    console.log(`Activity: ${activity.description}`);
+    uncomplete = activity.todos.filter((todo)=>todo.done===false).map((a)=>a.name);
+    console.log(uncomplete);
+  });
 }
 
 const notes = [
