@@ -1,5 +1,13 @@
 function sortPeopleByAge(arr) {
-  
+  return arr.sort((a, b) => {
+    if (a.age > b.age) {
+      return 1;
+    } else if (a.age < b.age) {
+      return -1;
+    } else {
+      return 0;
+    }
+  })
 }
 
 const people = [
