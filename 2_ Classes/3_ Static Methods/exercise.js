@@ -3,6 +3,10 @@ class Person {
     this.firstName = firstName;
     this.lastName = lastName;
   }
+  static fromObject(obj) {
+    let [k1, k2] = Object.keys(obj)
+    return new Person(obj[k1], obj[k2]);
+  }
 }
 
 const obj = {
