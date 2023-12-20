@@ -1,6 +1,6 @@
 function restOpRefactor({id, ...rest}) {
   console.log(id, rest);
-  return id, rest;        // Duda de por qué no devuelve los dos
+  return id, rest;        // Duda de si se pueden devolver dos
 }
 
 const person = {
@@ -10,12 +10,7 @@ const person = {
   age: 25
 };
 
-const id = person.id;
-const personInfo = {
-  firstName: person.firstName,
-  lastName: person.lastName,
-  age: person.age
-};
+const {id, ...personInfo} = person;
 
 console.log(id, personInfo);
 console.log(restOpRefactor(person));

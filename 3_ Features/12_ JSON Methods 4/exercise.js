@@ -1,4 +1,4 @@
-class Person {
+class Person {    // Con el método de clase toJSON
   constructor(id, firstName, lastName, age) {
     this.id = id;
     this.firstName = firstName;
@@ -17,7 +17,9 @@ const person = {
   age: 25,
 };
 
-const json = JSON.stringify(person);
+const {id, age} = {...person};    // Con Deconstructuring
+
+const json = JSON.stringify({id, age});
 const json2 = JSON.stringify(new Person(2, "Carlos", "Cuartero", 26));
 
 console.log(json); // Should return: { id: 1, age: 25 }
