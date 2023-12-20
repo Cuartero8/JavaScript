@@ -6,11 +6,17 @@ class Person {
     this.age = age;
   }
 
-  toJson() {
-    return JSON.stringify(this);
+  static toJson(obj) {
+    return JSON.stringify(obj);
+  }
+  static fromJson(json) {
+    return JSON.parse(json);
   }
 }
 
-const json = '{"id":1,"firstName":"Mario","lastName":"Rossi","age":25}';
+let json = '{"id":1,"firstName":"Mario","lastName":"Rossi","age":25}';
 const developer = Person.fromJson(json);
+json = Person.toJson(developer);
+
 console.log(developer);
+console.log(json);
