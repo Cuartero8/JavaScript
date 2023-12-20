@@ -1,3 +1,8 @@
+function restOpRefactor({id, ...rest}) {
+  console.log(id, rest);
+  return id, rest;        // Duda de por qué no devuelve los dos
+}
+
 const person = {
   id: 1,
   firstName: 'Mario',
@@ -13,3 +18,4 @@ const personInfo = {
 };
 
 console.log(id, personInfo);
+console.log(restOpRefactor(person));
