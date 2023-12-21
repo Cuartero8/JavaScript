@@ -1,6 +1,6 @@
 function restOpRefactor({id, ...rest}) {
   console.log(id, rest);
-  return id, rest;        // Duda de si se pueden devolver dos
+  return id, rest;        // Duda de si se pueden devolver dos así
 }
 
 const person = {
