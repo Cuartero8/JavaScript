@@ -10,16 +10,18 @@
     const response = await fetch(url);
     const data = await response.json();
 
+    const div = document.getElementById("container");
+
     const h2 = document.createElement("h2");
     h2.innerText = data.title;
-    document.body.appendChild(h2)
+    container.appendChild(h2)
   
     const checkbox = document.createElement("input");
     checkbox.setAttribute("type", "checkbox")
     checkbox.setAttribute("checked", data.completed);
-    document.body.appendChild(checkbox);
+    container.appendChild(checkbox);
   }
 
-  todo4HTML("https://jsonplaceholder.typicode.com/todos/4")
+  todo4HTML("https://jsonplaceholder.typicode.com/todos/4");
 
 </script>
