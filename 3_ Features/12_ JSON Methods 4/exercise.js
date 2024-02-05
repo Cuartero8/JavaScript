@@ -6,7 +6,7 @@ class Person {    // Con el método de clase toJSON
     this.age = age;
   }
   toJSON() {
-    return {id: this.id, age: this.age};
+    return JSON.stringify({id: this.id, age: this.age});
   }
 }
 
@@ -17,10 +17,10 @@ const person = {
   age: 25,
 };
 
-const {id, age} = {...person};    // Con Deconstructuring
+const {id, age} = person;    // Con Deconstructuring
 
 const json = JSON.stringify({id, age});
-const json2 = JSON.stringify(new Person(2, "Carlos", "Cuartero", 26));
+const json2 = new Person(2, "Carlos", "Cuartero", 26);
 
 console.log(json); // Should return: { id: 1, age: 25 }
-console.log(json2);
+console.log(json2.toJSON());
